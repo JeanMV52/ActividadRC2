@@ -23,7 +23,7 @@ void Opcion3(int AlumnosMatriculados[5][7][2]);
 
 int main(){
     FILE *archivo;
-    archivo = fopen("textoestudiantes.txt", "w");
+    archivo = fopen("textoestudiantes.txt", "a+");
 
     // Configuración de la localidad del programa
     setlocale(LC_ALL, "");
@@ -98,7 +98,7 @@ void Menu(int *flag, int AlumnosMatriculados[5][7][2]){
 // Función que encuentra y muestra el año en el quese matricularon más alumnos
 void Opcion1(int AlumnosMatriculados[5][7][2]){
     FILE *archivo;
-    archivo = fopen("textoestudiantes.txt", "w");
+    archivo = fopen("textoestudiantes.txt", "a+");
 
     int max;
     int cantidadMax[5] = {0};
@@ -133,7 +133,7 @@ void Opcion1(int AlumnosMatriculados[5][7][2]){
     //Función que encuentra y muestra la carrera que tuvo la mayor cantidad de alumnos en el último año
     void Opcion2(int AlumnosMatriculados[5][7][2]){
     FILE *archivo;
-    archivo = fopen("textoestudiantes.txt", "w");
+    archivo = fopen("textoestudiantes.txt", "a+");
 
     int max;
     int cantidadMax[7];
@@ -164,7 +164,7 @@ void Opcion1(int AlumnosMatriculados[5][7][2]){
     //Función que encuentra y muestra el año en el que se matricularon más alumnos en Ingeniería de Software
     void Opcion3(int AlumnosMatriculados[5][7][2]){
     FILE *archivo;
-    archivo = fopen("textoestudiantes.txt", "w");
+    archivo = fopen("textoestudiantes.txt", "a+");
 
     int max;
     int cantidadMax[5];
