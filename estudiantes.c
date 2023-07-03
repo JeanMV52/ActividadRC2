@@ -46,8 +46,9 @@ int main(){
     while (flag) {
         Menu(&flag, AlumnosMatriculados);
     }
+    
     fclose(archivo);
-   
+    
     return 0;
 
 }
@@ -122,11 +123,17 @@ void Opcion1(int AlumnosMatriculados[5][7][2]){
     // Muestra el resultado
     printf("El a\361o que mas alumnos ingresaron fue el %d con %d alumnos\n\n", max+1, cantidadMax[max]);
     fprintf(archivo, "El a\361o que mas alumnos ingresaron fue el %d con %d alumnos\n\n", max+1, cantidadMax[max]);
+    fclose(archivo);
+    
+
 
 
 }
+ 
     //Función que encuentra y muestra la carrera que tuvo la mayor cantidad de alumnos en el último año
     void Opcion2(int AlumnosMatriculados[5][7][2]){
+    FILE *archivo;
+    archivo = fopen("textoestudiantes.txt", "w");
 
     int max;
     int cantidadMax[7];
@@ -150,10 +157,14 @@ void Opcion1(int AlumnosMatriculados[5][7][2]){
 
     // Muestra el resultado
     printf("La materia que tuvo mas alumnos es %s con %d alumnos inscritos\n\n", nombresMaterias[max], cantidadMax[max]);
-
+    fprintf(archivo, "La materia que tuvo mas alumnos es %s con %d alumnos inscritos\n\n", nombresMaterias[max], cantidadMax[max]);
+    fclose(archivo);
+    
 }
     //Función que encuentra y muestra el año en el que se matricularon más alumnos en Ingeniería de Software
     void Opcion3(int AlumnosMatriculados[5][7][2]){
+    FILE *archivo;
+    archivo = fopen("textoestudiantes.txt", "w");
 
     int max;
     int cantidadMax[5];
@@ -177,5 +188,8 @@ void Opcion1(int AlumnosMatriculados[5][7][2]){
 
     // Muestra el resultado
     printf("El a\361o que tuvo mas estudiantes de software fue el %d con %d alumnos inscritos\n\n", max+1, cantidadMax[max]);
+    fprintf(archivo, "El a\361o que tuvo mas estudiantes de software fue el %d con %d alumnos inscritos\n\n", max+1, cantidadMax[max]);
+    fclose(archivo);
+    
 
 }
